@@ -159,9 +159,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .w3-padding-64{padding:64px!important;}
 
-.container-padding{
-
-}
 
 .padding-32{padding-top:64px!important;padding-bottom:32px!important}
 
@@ -192,29 +189,21 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-text-light-grey,.w3-hover-text-light-grey:hover,.w3-text-light-gray,.w3-hover-text-light-gray:hover{color:#f1f1f1!important}
 .w3-text-dark-grey,.w3-hover-text-dark-grey:hover,.w3-text-dark-gray,.w3-hover-text-dark-gray:hover{color:#3a3a3a!important}
 
+/*.gallery img {
+	transition: all s;
+}*/
 
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.gallery img {
-	width: 600px;
-	height: 400px;
-	margin: 10px;
-	transition: all 1s;
-}
-
-.gallery img:hover {
-	transform: scale(1.1);
+.s3 img:hover {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .container{
 	margin-left: auto;
 	margin-right: auto;
 }
-
 
 .col-sm-12{
 	background-color: pink!important;
