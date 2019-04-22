@@ -2,28 +2,41 @@
 
 <!DOCTYPE html>
 <html>
-<title>DJ Enda Colfer - Corporate Events | Weddings | Birthday Parties</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{% static 'style.css' %}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
+<head>
+	<title>DJ Enda Colfer - Corporate Events | Weddings | Birthday Parties</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<style>
+	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	.w3-row-padding img {margin-bottom: 12px}
+	/* Set the width of the sidebar to 120px */
+	.w3-sidebar {width: 120px;background: #222;}
+	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+	#main {margin-left: 120px}
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+	</style>
+</head>
+
 <body class="w3-black">
+
+	<!-- Necessary for Facebook widget-->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+
+
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img src="/w3images/avatar_smoke.jpg" style="width:100%">
+  <img src="static/icon.png" style="width:100%">
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
@@ -53,85 +66,106 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
 <!-- Page Content -->
-<div class="w3-padding-large" id="main">
+
   <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">DJ</span> Enda Colfer</h1>
-    <p>Ireland's Premier Party DJ </p>
-    <!-- <img src="/w3images/man_smoke.jpg" alt="" class="w3-image" width="992" height="1108"> -->
+  <header id="home" class="w3-padding-64 w3-center" >
+
+  	<!-- Begin JQuery code used to randomize background images of header -->
+  	  	<script type="text/javascript">
+  	  		var images = ['static/mainbg_1.jpg', 'static/mainbg_2.jpg', 'static/mainbg_4.jpg', 'static/mainbg_5.jpg'];
+  	  		$('#home').css({'background': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+		</script>
+	<!-- End JQuery -->
+
+  	<div class="w3-padding-large" id="main">
+	    <h1 class="w3-jumbo"><span class="w3-hide-small">DJ</span> Enda</h1>
+	    <h2>Ireland's Premier Party DJ </h2>
+	    <h3>Entertaining the Nation</h3>
+	    <p>Corporate Events | Weddings | Birthday Parties</p>
+	</div>
   </header>
 
   <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-       <h2 class="w3-text-light-grey">About</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Nationwide Professional Party DJ bringing fun and excitement to the dance floor, mixing music from the 60's, 70's, 80's, 90's, noughties and today!
-    </p>
+<div class="container w3-padding-64">
+  	<div class="row" style="padding-left: 64px;">
 
-    <h3 class="w3-padding-16 w3-text-light-grey">Company Overview</h3>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Providing fun DJ sets for all occasions, we love what we do and are excellent at our job!</p>
-    
-    
-    <!-- Testimonials -->
-    <h3 class="w3-padding-24 w3-text-light-grey">Products</h3> 
-    <p>
-    	<ul>
-    		<li>Birthday Parties</li>
-    		<li>Weddings</li>
-    		<li>Christmas Parties</li>
-    		<li>Kids Disco's</li>
-    		<li>Teenage Disco's</li>
-    		<li>Communion/Confirmation Parties</li>
-    		<li>Dinner Dances</li>
-    		<li>All Corporate Events</li>
-    	</ul>
-    </p>
-    
-  <!-- End About Section -->
-  </div>
-  
-  <!-- Portfolio Section -->
- <div class="padding-32 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">Photos</h2>
-    <hr style="width:200px" class="w3-opacity">
+	  	<div class="column col-sm-12 col-lg-8" id="about">
+	    	<h2 class="w3-text-light-grey">About</h2>
+		    <p style="margin-bottom: 4%;">Nationwide Professional Party DJ bringing fun and excitement to the dance floor, mixing music from the 60's, 70's, 80's, 90's, noughties and today!
+		    </p>
+ 				<hr width="50%"> 
+		    <h2 class="w3-text-light-grey">Company Overview</h2>
+    		<p style="margin-bottom: 4%;">Providing fun DJ sets for all occasions, we love what we do and are excellent at our job!</p>
+ 				<hr width="50%"> 
+    		<h2 class="w3-text-light-grey">Products</h2> 
+    		<p style="margin-bottom: 4%;">
+	    		<ul>
+	    		<li>Birthday Parties</li>
+	    		<li>Weddings</li>
+	    		<li>Christmas Parties</li>
+	    		<li>Kids Disco's</li>
+	    		<li>Teenage Disco's</li>
+	    		<li>Communion/Confirmation Parties</li>
+	    		<li>Dinner Dances</li>
+	    		<li>All Corporate Events</li>
+	    		</ul>
+    		</p>
+		</div><!-- End of first column-->
 
-</div>
-    <!-- Grid for photos -->
-      	<div class="w3-row-padding">
+		<div class="column col-sm-12 col-lg-4 id="about">
+			<div class="fb-page" style="width: 190px;"
+				data-href="https://www.facebook.com/djendagcolfer"
+				data-tabs="timeline" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
+				<blockquote cite="https://www.facebook.com/djendagcolfer" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/djendagcolfer">DJ Enda Colfer</a></blockquote>
+			</div>
+		</div><!-- End of second column-->
+		<hr width="50%"> 
+	</div><!-- End of FIRST row -->
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * P H O T O S -->
+	<div class="row" style="padding-left: 64px;">
+		 <div  class="column col-sm-12 col-lg-8" id="photos">
+		 	<h2 class="w3-text-light-grey">Photos</h2>
+		 	<hr style="width:200px" class="w3-opacity">
+		 </div>
+    
+    	<!-- Grid for photos -->
+     	<div class="w3-row-padding">
       		<div class="gallery w3-half">
 			<img src="{% static 'dj.jpg'%}" style="width:100%">
 			<img src="{% static 'dj2.jpg'%}" style="width:100%"></div>
 		<div class="gallery w3-half">
 			<img src="{% static 'dj3.jpg'%}" style="width:100%">
 			<img src="{% static 'dj4.jpg'%}" style="width:100%">
-			</div>
-</div>
+		</div>
+		</div>
+		<hr style="width:200px" class="w3-opacity">
+	</div><!-- End of SECOND row -->
 
-  <!-- Contact Section -->
-  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
 
-    <div class="w3-section">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Carlow, Ireland</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 086 066 5737</p>
-      <p><a href="https://www.facebook.com/messages/t/djendagcolfer"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Facebook Messenger</a></p>
-    </div><br>
-    
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * C O N T A C T -->
+	<div class="row" style="padding-left: 64px;">
+		 <div  class="column col-sm-12 col-lg-8" id="contact">
+		 	<h2 class="w3-text-light-grey">Contact Me</h2>
+		 	<div class="w3-section">
+      			<p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Carlow, Ireland</p>
+      			<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 086 066 5737</p>
+      			<p><a href="https://www.facebook.com/messages/t/djendagcolfer"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Facebook Messenger</a></p>
+    		</div>
+  		</div>
+  		<hr style="width:200px" class="w3-opacity">
+  	</div><!-- End of THIRD row -->
+
+</div><!-- end of container -->
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * F O O T E R -->
+  <footer class="w3-content w3-text-grey w3-xlarge" style="padding-bottom: 64px;">
     <a href="https://www.facebook.com/djendagcolfer"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-<!--     <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i> -->
     <p class="w3-medium">(C) Enda Colfer 2019</a></p>
-  <!-- End footer -->
   </footer>
 
 <!-- END PAGE CONTENT -->
