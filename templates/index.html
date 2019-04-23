@@ -72,12 +72,13 @@
 <!-- Page Content -->
 
   <!-- Header/Home -->
-  <header id="home" class="w3-center" style="padding-top: 64px; padding-bottom: 64px;">
+  <header id="home" class="w3-center" style="border-bottom:solid 1px #3e0133; padding-top: 64px; padding-bottom: 64px; transition: background 1s linear;">
 
   	<!-- Begin JQuery code used to randomize background images of header -->
   	  	<script type="text/javascript">
-  	  		var images = ['static/mainbg_1.jpg', 'static/mainbg_2.jpg', 'static/mainbg_4.jpg', 'static/mainbg_5.jpg'];
+  	  		var images = ['static/mbg1.jpg', 'static/mbg2.jpg', 'static/mbg3.jpg', 'static/mbg4.jpg'];
   	  		$('#home').css({'background': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+
 		</script>
 	<!-- End JQuery -->
 
@@ -95,14 +96,14 @@
 	<div class="row">
 
 	  	<div class="col col-sm-12 col-lg-8" id="about">
-	    	<h2 class="w3-text-light-grey">About</h2>
+	    	<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">About</h2>
 		    <p style="margin-bottom: 4%;">Nationwide Professional Party DJ bringing fun and excitement to the dance floor, mixing music from the 60's, 70's, 80's, 90's, noughties and today!
 		    </p>
  				<hr width="50%"> 
-		    <h2 class="w3-text-light-grey">Company Overview</h2>
+		    <h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">Company Overview</h2>
     		<p style="margin-bottom: 4%;">Providing fun DJ sets for all occasions, we love what we do and are excellent at our job!</p>
  				<hr width="50%"> 
-    		<h2 class="w3-text-light-grey">Products</h2> 
+    		<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">Products</h2> 
     		<p style="margin-bottom: 4%;">
 	    		<ul>
 	    		<li>Birthday Parties</li>
@@ -119,7 +120,7 @@
     		<hr width="50%">
     		<hr width="50%">
 
-    	<h2 class="w3-text-light-grey w3-hide-small" id="photos">Photos</h2>
+    	
 		</div><!-- End of first column-->
 
 		<div class="col col-sm-12 col-lg-4 id="about">
@@ -130,14 +131,13 @@
 			</div>
 		</div><!-- End of second column-->
 
-
 	</div><!-- End of FIRST row -->
 
-
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * P H O T O S -->
-	<div class="row w3-hide-small" style="padding-left: 64px;">
-		<div class="col col-sm-0 col-lg-2" style="text-align: right;">
-			<button class="w3-button w3-black" onclick="buttons(-1)" style="margin-top:100%;">&#10094;</button></div>
+	<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;" id="photos">Photos</h2>
+		<div class="row w3-hide-small" style="padding-left: 64px;">
+			<div class="col col-sm-0 col-lg-2" style="text-align: right;">
+				<button class="w3-button w3-black" onclick="buttons(-1)" style="margin-top:100%;">&#10094;</button></div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * -->
 		<div class="gallery col col-sm-12 col-lg-8"> 
@@ -217,7 +217,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * C O N T A C T -->
 	<div class="row">
 		 <div  class="column col-sm-12 col-lg-8" id="contact">
-		 	<h2 class="w3-text-light-grey">Contact Me</h2>
+		 	<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">Contact Me</h2>
 		 	<div class="w3-section">
       			<p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Carlow, Ireland</p>
       			<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 086 066 5737</p>
@@ -230,9 +230,16 @@
 </div><!-- end of container -->
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * F O O T E R -->
-  <footer class="w3-text-grey" style="background-color:black; text-align:center; padding-top:3%; padding-bottom: 2%;">
-    <a href="https://www.facebook.com/djendagcolfer"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-    <p class="w3-medium">DJ Enda - Ireland's Premier Party DJ || (C) Enda Colfer 2019</a></p>
+  <footer style="text-align:center; padding-top:3%; padding-bottom: 1%;">
+    
+    <p class="w3-medium" style="border-top:solid 1px #3e0133; padding-top: 1%;">
+    	<a href="https://www.facebook.com/djendagcolfer"><i class="fa fa-facebook-official w3-hover-opacity"></i></a> DJ Enda - Ireland's Premier Party DJ</p>
+    <p> &copy; Enda Colfer 2019</p>
+
+    <p style="color:#3e0133; font-size: 0.55em;">Image credits to Maurício Mascaro, Trinity Kubassek, Mark Angelo, and Kaboompics from Pexels</p>
+
+
+
   </footer>
 
 <!-- END PAGE CONTENT -->
