@@ -3,14 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  <title>DJ Enda Colfer - Corporate Events | Weddings | Birthday Parties</title>
 	<meta charset="UTF-8">
  	<meta name="description" content="DJ Enda Colfer is available for corporate events, weddings, birthday parties and more! Based in Country Carlow, DJ Enda...">
-  	<meta name="keywords" content="DJ, ireland, dublin, kildare, meath, carlow, gigs, wedding, music, speakers, hire">
-  	<meta name="author" content="Aalasa Fidler">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>DJ Enda Colfer - Corporate Events | Weddings | Birthday Parties</title>
+  <meta name="keywords" content="DJ, ireland, dublin, kildare, meath, carlow, gigs, wedding, music, speakers, hire">
+  <meta name="author" content="Aalasa Fidler">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{% static 'style.css' %}">
@@ -19,14 +17,18 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<style>
-	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-	.w3-row-padding img {margin-bottom: 12px}
-	/* Set the width of the sidebar to 120px */
-	.w3-sidebar {width: 120px;background: #222;}
-	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-	#main {margin-left: 120px}
-	/* Remove margins from "page content" on small screens */
-	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+  	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+  	.w3-row-padding img {margin-bottom: 12px}
+  	/
+  	.w3-sidebar {width: 120px;background: #222;}
+
+  	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+  	#page-content {margin-left: 120px}
+
+  	/* Remove margins from "page content" on small screens */
+  	@media only screen and (max-width: 600px) {
+      #page-content {margin-left: 0}
+    }
 	</style>
 </head>
 
@@ -37,79 +39,78 @@
 	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="static/icon.png" style="width:100%">
-  <a href="" id="homeMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="homeClick(this)">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="events" id="aboutMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="aboutClick(this)">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>EVENTS</p>
-  </a>
-  <a href="about" id="contactMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="contactClick(this)">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>ABOUT</p>
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <img src="static/icon.png" style="width:100%">
 
-  <a href="gallery" id="photosMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="photosClick(this)">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>GALLERY</p>
-  </a>
-  <a href="#contact" id="contactMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="contactClick(this)">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
+    <a href="/" id="homeMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a href="events" id="aboutMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <img src="{% static 'l.png' %}" class="fa w3-xxlarge"></i>
+      <p>EVENTS</p>
+    </a>
+    <a href="about" id="contactMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>ABOUT</p>
+    </a>
+    <a href="gallery" id="galleryMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="setBackground(this)">
+      <i class="fa fa-eye w3-xxlarge"></i>
+      <p>GALLERY</p>
+    </a>
+    <a href="contact" id="contactMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
 
 
-  </a>
-</nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">EVENTS</a>
+      <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+      <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">GALLERY</a>
+      <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    </div>
   </div>
-</div>
 
-<!-- Page Content -->
+<!-- This div starts to the right of the side bar -->
+<div id="page-content">
 
   <!-- Header/Home -->
   <header id="home" class="w3-center" style="border-bottom:solid 1px #3e0133; padding-top: 15px; padding-bottom: 15px; transition: background 1s linear;">
 
-  	<!-- Begin JQuery code used to randomize background images of header -->
-  	  	<script type="text/javascript">
-  	  		var images = ['static/mbg1.jpg', 'static/mbg2.jpg', 'static/mbg3.jpg', 'static/mbg4.jpg'];
+  <!-- Begin JQuery code used to randomize background images of header -->
+  	<script type="text/javascript">
+      var images = ['static/mbg1.jpg', 'static/mbg2.jpg', 'static/mbg3.jpg', 'static/mbg4.jpg'];
   	  		$('#home').css({'background': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+		</script><!-- End JQuery -->
 
-		</script>
-	<!-- End JQuery -->
-
-  	<div class="w3-padding-large" id="main">
+  	<div class="w3-padding-large">
 	    <h1 class="w3-jumbo"><span class="w3-hide-small">DJ</span> Enda</h1>
 	    <h2>Ireland's Premier Party DJ </h2>
 	    <h3>Entertaining the Nation</h3>
 	    <p>Corporate Events | Weddings | Birthday Parties</p>
-	</div>
+	  </div>
   </header>
 
 {% block body %}
 {% endblock %}
 
-
+</div> <!-- Closing page-content div-->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * F O O T E R -->
   <footer style="text-align:center; padding-top:3%; padding-bottom: 1%;">
-    
+  
     <p class="w3-medium" style="border-top:solid 1px #3e0133; padding-top: 1%;">
       <a href="https://www.facebook.com/djendagcolfer"><i class="fa fa-facebook-official w3-hover-opacity"></i></a> DJ Enda - Ireland's Premier Party DJ</p>
     <p> &copy; Enda Colfer 2019</p>
 
     <p style="color:#3e0133; font-size: 0.55em;">Image credits to Maurício Mascaro, Trinity Kubassek, Mark Angelo, and Kaboompics from Pexels</p>
 
-
-
   </footer>
+</body>

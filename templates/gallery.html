@@ -6,124 +6,126 @@
 {% block body %}
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * P H O T O S -->
+<div class="row" onload="setBackground()">
 
-		<div class="row w3-hide-small" style="padding-left: 64px;">
+<!-- BUTTON: Click to view image to the left -->
+	<div class="w3-hide-small col col-sm-0 col-lg-2" style="text-align: right;">
+		<button class="w3-button w3-black" onclick="buttons(-1)" style="margin-top:100%;">&#10094;</button>
+	</div>
 
-
-			<div class="col col-sm-0 col-lg-2" style="text-align: right;">
-				<button class="w3-button w3-black" onclick="buttons(-1)" style="margin-top:100%;">&#10094;</button></div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * -->
-		<div class="gallery col col-sm-12 col-lg-8"> 
-
-			<hr style="width:200px" class="w3-opacity">
-		 	<img class="mySlides" src="{% static 'dj.jpg'%}" style="width:100%;">
-		  	<img class="mySlides" src="{% static 'dj2.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'dj3.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'dj4.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'bride&groom.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'busy_bar.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'busy_dance_floor.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'busy_dance_floor2.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'busy_dance_floor3.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'dj_setup.jpg'%}" style="width:100%;display:none">
-			<img class="mySlides" src="{% static 'dj_setup2.jpg'%}" style="width:100%;display:none">
-
-			<!-- -->
-			<div class="w3-row-padding w3-section">
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(1)">
-			    </div>
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj2.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(2)">
-			    </div>
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj3.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(3)">
-			    </div>
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj4.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(4)">
-			    </div>
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'bride&groom.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(5)">
-			    </div>
-			    <div class="w3-col s2">
-			    	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_dance_floor.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(6)">
-			    </div>
-			</div> <!-- End of row -->
-
-			    <!-- NEW ROW -->
-			<div class="w3-row-padding w3-section">
-			    
-			    <div class="w3-col s2">
-			    	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_bar.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(7)">
-			    </div>
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_dance_floor2.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(8)">
-			    </div>
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_dance_floor3.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(9)">
-			    </div>
-			     <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj_setup.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(10)">
-			    </div>
-			    <div class="w3-col s2">
-			      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj_setup2.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(11)">
-			    </div>
-			</div> <!-- End of row -->
-
-			 </div>
-
-		<!-- * * * * * * * * * * * * * * * * * * * * * -->
-
-		<div class="col col-sm-0 col-lg-2" style="text-align: left;">
-			<button class="w3-button w3-black" onclick="buttons(1)" style="margin-top:100%;">&#10095;</button></div>
-
+<!-- GALLERY ITSELF * * * * * * * * * * * * * * * * * * * * * -->
+	<div class="gallery col col-sm-12 col-lg-8"> 
 		<hr style="width:200px" class="w3-opacity">
 
-	</div><!-- End of SECOND row -->
+	 	<img class="mySlides" src="{% static 'dj.jpg'%}" style="width:100%;">
+	  	<img class="mySlides" src="{% static 'dj2.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'dj3.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'dj4.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'bride&groom.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'busy_bar.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'busy_dance_floor.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'busy_dance_floor2.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'busy_dance_floor3.jpg'%}" style="width:100%;display:none">
+	  	<img class="mySlides" src="{% static 'dj_setup.jpg'%}" style="width:100%;display:none">
+		<img class="mySlides" src="{% static 'dj_setup2.jpg'%}" style="width:100%;display:none">
 
-					<script>
-						var slideIndex = 1;
-					function currentDiv(n) {
-					  showDivs(slideIndex = n);
-					}
+		<!-- THUMBNAILS -->
+		<div class="w3-row-padding w3-section">
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(1)">
+		    </div>
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj2.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(2)">
+		    </div>
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj3.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(3)">
+		    </div>
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj4.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(4)">
+		    </div>
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'bride&groom.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(5)">
+		    </div>
+		    <div class="w3-col s2">
+		    	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_dance_floor.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(6)">
+		    </div>
+		</div> <!-- End of row -->
 
-					function buttons(n) {
-					  showDivs2(slideIndex += n);
-					}
+		<!-- THUMBNAILS CONT. -->
+		<div class="w3-row-padding w3-section">	    
+		    <div class="w3-col s2">
+		    	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_bar.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(7)">
+		    </div>
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_dance_floor2.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(8)">
+		    </div>
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'busy_dance_floor3.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(9)">
+		    </div>
+		     <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj_setup.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(10)">
+		    </div>
+		    <div class="w3-col s2">
+		      	<img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj_setup2.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(11)">
+		    </div>
+		</div> <!-- End of row -->
 
-					function showDivs(n) {
-					  var i;
-					  var x = document.getElementsByClassName("mySlides");
-					  var dots = document.getElementsByClassName("demo");
-					  if (n > x.length) {slideIndex = 1}
-					  if (n < 1) {slideIndex = x.length}
-					  for (i = 0; i < x.length; i++) {
-					    x[i].style.display = "none";
-					  }
-					  for (i = 0; i < dots.length; i++) {
-					    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-					  }
-					  x[slideIndex-1].style.display = "block";
-					  dots[slideIndex-1].className += " w3-opacity-off";
-					}
+	</div> <!-- End of gallery -->
 
-					function showDivs2(n) {
-					  var i;
-					  var x = document.getElementsByClassName("mySlides");
-					  var dots = document.getElementsByClassName("demo");
-					  if (n > x.length) {slideIndex = 1}
-					  if (n < 1) {slideIndex = x.length}
-					  for (i = 0; i < x.length; i++) {
-					    x[i].style.display = "none";
-					  }
-					  for (i = 0; i < dots.length; i++) {
-					    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-					  }
-					  x[slideIndex-1].style.display = "block";
-					  dots[slideIndex-1].className += " w3-opacity-off";
-					}
-					</script>
+<!-- BUTTON: Click to view image to the right -->
+	<div class="w3-hide-small col col-sm-0 col-lg-2" style="text-align: left;">
+		<button class="w3-button w3-black" onclick="buttons(1)" style="margin-top:100%;">&#10095;</button>
+	</div>
 
+</div><!-- End of only row -->
+
+	<script>
+	console.log("just loaded JS");
+	document.getElementById('galleryMenu').style.backgroundColor = "#404040";
+	console.log("changed colour");
+
+	var slideIndex = 1;
+	function currentDiv(n) {
+	  showDivs(slideIndex = n);
+	}
+
+	function buttons(n) {
+	  showDivs2(slideIndex += n);
+	}
+
+	function showDivs(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " w3-opacity-off";
+	}
+
+	function showDivs2(n) {
+	  var i;
+	  var x = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("demo");
+	  if (n > x.length) {slideIndex = 1}
+	  if (n < 1) {slideIndex = x.length}
+	  for (i = 0; i < x.length; i++) {
+	    x[i].style.display = "none";
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+	  }
+	  x[slideIndex-1].style.display = "block";
+	  dots[slideIndex-1].className += " w3-opacity-off";
+	}
+
+
+</script>
 					
 {% endblock %}
