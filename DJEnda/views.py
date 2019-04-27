@@ -12,3 +12,6 @@ def gallery(request):
 
 def contact(request):
 	return render(request, 'contact.html')
+
+def events(request):
+	return render(request, 'events.html')
