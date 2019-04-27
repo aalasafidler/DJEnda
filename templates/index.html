@@ -41,19 +41,19 @@
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="static/icon.png" style="width:100%">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+  <a href="#" id="homeMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="homeClick(this)">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#about" id="aboutMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="aboutClick(this)">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#photos" id="photosMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="photosClick(this)">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>PHOTOS</p>
   </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="#contact" id="contactMenu" class="w3-bar-item w3-button w3-padding-large w3-hover-black" onclick="contactClick(this)">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
@@ -244,6 +244,46 @@
 
 <!-- END PAGE CONTENT -->
 </div>
+
+
+<script>
+	function menuBackground() {
+		document.getElementById("homeMenu").style.backgroundColor = "#000000";
+	}
+
+	function homeClick(obj) {
+  		document.getElementById("homeMenu").style.backgroundColor = "#000000";
+  		document.getElementById("aboutMenu").style.backgroundColor = "#222222";
+  		document.getElementById("photosMenu").style.backgroundColor = "#222222";
+  		document.getElementById("contactMenu").style.backgroundColor = "#222222";
+  		console.log("home clicked");
+	}
+
+	function aboutClick(obj) {
+  		document.getElementById("homeMenu").style.backgroundColor = "#222222";
+  		document.getElementById("aboutMenu").style.backgroundColor = "#000000";
+  		document.getElementById("photosMenu").style.backgroundColor = "#222222";
+  		document.getElementById("contactMenu").style.backgroundColor = "#222222";
+  		console.log("about clicked");
+	}
+
+	function photosClick(obj) {
+		document.getElementById("homeMenu").style.backgroundColor = "#222222";
+		document.getElementById("aboutMenu").style.backgroundColor = "#222222";
+		document.getElementById("photosMenu").style.backgroundColor = "#000000";
+		document.getElementById("contactMenu").style.backgroundColor = "#222222";
+		console.log("photos clicked");
+	}
+
+	function contactClick(obj) {
+		document.getElementById("homeMenu").style.backgroundColor = "#222222";
+		document.getElementById("aboutMenu").style.backgroundColor = "#222222";
+		document.getElementById("photosMenu").style.backgroundColor = "#222222";
+		document.getElementById("contactMenu").style.backgroundColor = "#000000";
+		console.log("contact clicked");
+	}
+</script>
+
 
 </body>
 </html>
