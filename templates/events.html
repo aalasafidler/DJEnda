@@ -6,141 +6,99 @@
 
 {% block body %}
 <!-- About Section -->
-<div class="container-padding" style="width: 100%; margin: 0 auto; padding-top: 5%!important; padding-left: 15%!important; padding-right: 15%!important;">
+<div class="row" style="margin:3%;">
 
-	<div class="row">
+	<div class="w3-hide-small col col-sm-0 col-lg-1"></div>
 
-	  	<div class="col col-sm-12 col-lg-8" id="about">
-	    	<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">About</h2>
-		    <p style="margin-bottom: 4%;">Nationwide Professional Party DJ bringing fun and excitement to the dance floor, mixing music from the 60's, 70's, 80's, 90's, noughties and today!
-		    </p>
- 				<hr width="50%"> 
-		    <h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">Company Overview</h2>
-    		<p style="margin-bottom: 4%;">Providing fun DJ sets for all occasions, we love what we do and are excellent at our job!</p>
- 				<hr width="50%"> 
-    		<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">Products</h2> 
-    		<p style="margin-bottom: 4%;">
-	    		<ul>
-	    			<li>Crown Plaza Blanchardstown</li>
-				<li>Castleknock Hotel</li>
-				<li>Osprey Nass</li>
-				<li>RDS</li>
-				<li>Shelbourne Hotel Dublin</li>
-				<li>Springfield Hotel Leixlip</li>
-				<li>Glenroyal Hotel</li>
-				<li>Bridgehouse Hotel</li>
-	    		</ul>
-    		</p>
 
-    		<hr width="50%">
-    		<hr width="50%">
 
-    	
-		</div><!-- End of first column-->
+<!--/****************************/-->
+	<div class="col col-sm-12 col-lg-10"> 
+		<div class="row">
 
-		<div class="col col-sm-12 col-lg-4 id="about">
-			<div class="fb-page" style="width: 190px;"
-				data-href="https://www.facebook.com/djendagcolfer"
-				data-tabs="timeline" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true">
-				<blockquote cite="https://www.facebook.com/djendagcolfer" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/djendagcolfer">DJ Enda Colfer</a></blockquote>
+			<div class="col col-sm-4">
+
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-bday.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Birthday Parties</div></a>
+				</div>
+
+
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-office.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Corporate</div></a>
+				</div>
+						
+
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-communion.jpeg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Communions and Confirmations</div></a>
+				</div>
+										
 			</div>
-		</div><!-- End of second column-->
 
-	</div><!-- End of FIRST row -->
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * P H O T O S -->
-	<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;" id="photos">Photos</h2>
-		<div class="row w3-hide-small" style="padding-left: 64px;">
-			<div class="col col-sm-0 col-lg-2" style="text-align: right;">
-				<button class="w3-button w3-black" onclick="buttons(-1)" style="margin-top:100%;">&#10094;</button></div>
+				<div class="col col-sm-4">
 
-<!-- * * * * * * * * * * * * * * * * * * * * * -->
-		<div class="gallery col col-sm-12 col-lg-8"> 
-			<hr style="width:200px" class="w3-opacity">
-		 	<img class="mySlides" src="{% static 'dj.jpg'%}" style="width:100%;">
-		  	<img class="mySlides" src="{% static 'dj2.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'dj3.jpg'%}" style="width:100%;display:none">
-		  	<img class="mySlides" src="{% static 'dj4.jpg'%}" style="width:100%;display:none">
-			<div class="w3-row-padding w3-section">
-			    <div class="w3-col s3">
-			      <img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(1)">
-			    </div>
-			    <div class="w3-col s3">
-			      <img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj2.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(2)">
-			    </div>
-			    <div class="w3-col s3">
-			      <img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj3.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(3)">
-			    </div>
-			    <div class="w3-col s3">
-			      <img class="demo w3-opacity w3-hover-opacity-off" src="{% static 'dj4.jpg'%}" style="height:100%; width:100%;cursor:pointer" onclick="currentDiv(4)">
-			    </div>
-			 </div>
-		</div>
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-wed.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Weddings</div></a>
+				</div>
+					
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-party.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Themed Events</div></a>
+				</div>	
+				
 
-		<!-- * * * * * * * * * * * * * * * * * * * * * -->
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-students.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Kids/Teenage Discos</div></a>
+				</div>
+										
+			</div>
 
-		<div class="col col-sm-0 col-lg-2" style="text-align: left;">
-			<button class="w3-button w3-black" onclick="buttons(1)" style="margin-top:100%;">&#10095;</button></div>
+			<div class="col col-sm-4">
 
-		<hr style="width:200px" class="w3-opacity">
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-xmas.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Christmas Parties</div></a>
+				</div>
 
-	</div><!-- End of SECOND row -->
 
-					<script>
-						var slideIndex = 1;
-					function currentDiv(n) {
-					  showDivs(slideIndex = n);
-					}
+				<div class="card">
+					<a href="contact"><img src="{% static 'dj3.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">MC</div></a>
+				</div>
+						
 
-					function buttons(n) {
-					  showDivs2(slideIndex += n);
-					}
+				<div class="card">
+					<a href="contact"><img src="{% static 'card-bar.jpg' %}" class="card-img-top" alt="...">
+  					<div class="card-body">
+    					<p class="card-text">Bars and Clubs</div></a>
+				</div>
+										
+			</div>
 
-					function showDivs(n) {
-					  var i;
-					  var x = document.getElementsByClassName("mySlides");
-					  var dots = document.getElementsByClassName("demo");
-					  if (n > x.length) {slideIndex = 1}
-					  if (n < 1) {slideIndex = x.length}
-					  for (i = 0; i < x.length; i++) {
-					    x[i].style.display = "none";
-					  }
-					  for (i = 0; i < dots.length; i++) {
-					    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-					  }
-					  x[slideIndex-1].style.display = "block";
-					  dots[slideIndex-1].className += " w3-opacity-off";
-					}
 
-					function showDivs2(n) {
-					  var i;
-					  var x = document.getElementsByClassName("mySlides");
-					  var dots = document.getElementsByClassName("demo");
-					  if (n > x.length) {slideIndex = 1}
-					  if (n < 1) {slideIndex = x.length}
-					  for (i = 0; i < x.length; i++) {
-					    x[i].style.display = "none";
-					  }
-					  for (i = 0; i < dots.length; i++) {
-					    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-					  }
-					  x[slideIndex-1].style.display = "block";
-					  dots[slideIndex-1].className += " w3-opacity-off";
-					}
-					</script>
+	</div>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * C O N T A C T -->
-	<div class="row">
-		 <div  class="column col-sm-12 col-lg-8" id="contact">
-		 	<h2 style="color:lightgrey; border-bottom: solid 1px #eb0185;">Contact Me</h2>
-		 	<div class="w3-section">
-      			<p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Carlow, Ireland</p>
-      			<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: 086 066 5737</p>
-      			<p><a href="https://www.facebook.com/messages/t/djendagcolfer"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Facebook Messenger</a></p>
-    		</div>
-  		</div>
-  		<hr style="width:200px" class="w3-opacity">
-  	</div><!-- End of THIRD row -->
+	<!--/****************************/-->
+<div class="w3-hide-small col col-sm-0 col-lg-1"></div>
+
+<!--/****************************/-->
+
+	</div>
+
+
 
 </div><!-- end of container -->
 
